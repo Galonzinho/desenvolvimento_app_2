@@ -1,0 +1,13 @@
+void main() {
+  
+  String nome = "Gabriel";
+  String sobreNome = "Biffi Galon";
+  String endereco = "Rua primeiro de março, 116";
+  int idade = 23;
+  
+  print("Nome: $nome\n"
+         "Sobrenome: $sobreNome\n"
+         "Idade: $idade\n"
+         "Endereço: $endereco");
+  
+}

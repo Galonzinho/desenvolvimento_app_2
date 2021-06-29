@@ -1,0 +1,8 @@
+void main() {
+  
+  double valorEntrada = 25.50;
+  double numPessoas = 4;
+  double valorFinal = valorEntrada * numPessoas;
+  
+  print("Total a pagar para $numPessoas entradas é: $valorFinal");
+}

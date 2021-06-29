@@ -1,0 +1,14 @@
+void main() {
+  
+  double baseMaior = 8.02;
+  double baseMenor = 6.52;
+  double altura = 0.54;
+  double totalTrapezio = ((baseMaior + baseMenor) * altura)/2;
+  
+  print("Sabendo-se que os valores do trapézio são:\n");
+  print("Base maior: $baseMaior\n"
+         "Base menor: $baseMenor\n"
+         "Altura: $altura\n\n"
+         "A área total do trapézio é igual a: $totalTrapezio");
+  
+}

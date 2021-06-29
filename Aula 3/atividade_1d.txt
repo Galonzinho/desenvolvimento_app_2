@@ -1,0 +1,9 @@
+void main() {
+  
+  double ladoQuadrado = 12;
+  double alturaQuadrado = 12;
+  double totalQuadrado = ladoQuadrado * alturaQuadrado;
+  
+  print("Sabendo que a área de um quadrado é a Base X Altura (b * a), tendo ambas com o valor $ladoQuadrado, a área total do quadrado é de: $totalQuadrado");
+  
+}

@@ -1,0 +1,11 @@
+void main() {
+  
+  String nome1 = "Joana", nome2 = "Matheus";
+  
+  if(nome1 == nome2){
+    print("Os nomes são iguais!");
+  }else{
+    print("Os nomes não batem.");
+  }
+  
+}
