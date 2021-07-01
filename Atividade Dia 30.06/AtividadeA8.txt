@@ -1,0 +1,23 @@
+void main() {
+ 
+  dynamic nadador = checarCategoria(45);
+  print(nadador);
+  
+}
+
+dynamic checarCategoria(dynamic idade ){
+  String resposta;
+  if(idade >= 8 && idade < 12){
+    resposta = "Categoria Infantil";
+  }else if(idade > 12 && idade <= 18){
+    resposta = "Categoria Adolescente";
+  }else if(idade > 18 && idade <= 59){
+    resposta = "Categoria adulta";
+  }else if(idade >= 60 && idade < 65){
+    resposta = "Categoria idosa";
+  }else{
+    resposta = "Não pode participar";
+  }
+  
+  return resposta;
+}

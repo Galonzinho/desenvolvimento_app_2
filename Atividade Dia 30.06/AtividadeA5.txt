@@ -1,0 +1,11 @@
+void main() {
+  
+  double media = verMedia(20, 30, 80, 15, 2, 56);
+  
+  print(media);
+}
+
+double verMedia(double num1, double num2, double num3, double num4, double num5, double num6){
+  double resposta = (num1 + num2 + num3 + num4 + num5 + num6) / 6;
+  return resposta;
+}

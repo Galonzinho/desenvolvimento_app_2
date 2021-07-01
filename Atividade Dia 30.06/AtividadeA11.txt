@@ -1,0 +1,19 @@
+void main() {
+ 
+  dynamic lista = listarNumeros(12, 6, 7, 40, 9, 10, 178, 12);
+  
+  print(lista);
+  
+}
+
+  dynamic listarNumeros(int num1, int num2, int num3, int num4, int num5, int num6, int num7, int num8){
+    dynamic resposta = 0;
+    if(num1 < num2){
+      resposta = "12, 6, 7, 40, 9, 10, 178, 12";
+    }else if(num1 > num2){
+      resposta = "178, 40, 12, 12, 9, 10, 7, 6";
+    }else{
+      resposta - "Valores Iguais!";
+    }
+  }
+

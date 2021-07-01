@@ -1,0 +1,18 @@
+void main() {
+  
+  int num = 8;
+  bool resposta;
+  String zero;
+  
+  if(num > 0){
+    resposta = true;
+    print(resposta);
+  }else if(num < 0){
+    resposta = false;
+    print(resposta);
+  }else{
+    zero = "O número é igual a zero";
+    print(zero);
+  }
+  
+}

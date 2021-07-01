@@ -1,0 +1,19 @@
+void main() {
+  
+  int checarPrimo = verSePrimo(6);
+  
+  print("O resto da divisão do número $num é igual a $verSePrimo. Portanto, ele é $primo");
+
+}
+
+bool primo = false;
+
+int verSePrimo(int num){
+  if(num % 2 == 0){
+    primo = false;
+    return 0;
+  }else{
+    primo = true;
+    return 1;
+  }
+}

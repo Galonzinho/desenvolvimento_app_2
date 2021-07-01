@@ -1,0 +1,20 @@
+void main() {
+ 
+  int num1 = 8, num2 = 12, soma, produto, quadradoPrim, triploDobroSoma, moduloPrimeiro;
+  double metadeTriploDobroSoma;
+  
+  soma = num1 + num2;
+  produto = num1 * (num2 * num2);
+  quadradoPrim = num1 * num1;
+  triploDobroSoma = (soma * 2) * 3;
+  metadeTriploDobroSoma = ((soma * 2) * 3) / 2;
+  moduloPrimeiro = num1 % 3;
+  
+  print("$soma\n"
+       "$produto\n"
+       "$quadradoPrim\n"
+       "$triploDobroSoma\n"
+       "$metadeTriploDobroSoma\n"
+       "$moduloPrimeiro");
+  
+}

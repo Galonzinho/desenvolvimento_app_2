@@ -1,0 +1,16 @@
+void main() {
+ 
+  double media = 8;
+  String conceito = "";
+  
+  if(media >= 6){
+    conceito = "Aprovado!";
+  }else if(media < 6){
+    conceito = "Reprovado";
+  }else{
+    conceito = "Na média!";
+  }
+  
+  print("Um aluno com média igual a $media está: $conceito");
+  
+}

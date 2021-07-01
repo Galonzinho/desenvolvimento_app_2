@@ -1,0 +1,22 @@
+void main() {
+  
+  int menorNumero = verMenorNum(5, 8);
+  
+  
+  print("O menor número é: $menorNumero");
+
+}
+
+int verMenorNum(int num1, int num2){
+  int resposta;
+  if(num1 < num2){
+    resposta = num1;
+    return resposta;
+  }else if(num2 < num1){
+    resposta = num2;
+    return resposta;
+  }else{
+    resposta = 0;
+    return resposta;
+  }
+}

@@ -1,0 +1,24 @@
+void main() {
+  
+  double mediaPond = calcMediaPonderada(6, 8, 4);
+  print(mediaPond);
+  
+}
+
+String letra = "A";
+
+double calcMediaPonderada(double mediaA1, double mediaA2, double mediaA3){
+  if(letra == "A"){
+  double resultado = (mediaA1 + mediaA2 + mediaA3) / 3;
+  return resultado;
+  }else if(letra == "B"){
+    double resultado = (mediaA1 * 5 + mediaA2 * 3 + mediaA3 * 2) / 10;
+    return resultado;
+  }else if(letra == "C"){
+    double resultado = (mediaA1 + mediaA2 + mediaA3) / ((2 * 2 * 2 * 3) / 3);
+    return resultado;
+  }else{
+    double resultado = 0;
+    return resultado;
+  }
+}

@@ -1,0 +1,27 @@
+void main() {
+ 
+  int numero = calcular(5, 80);
+  
+  print(numero);
+  
+}
+  
+  int funcao = 1;
+  
+  dynamic calcular(dynamic num1, dynamic num2){ 
+    dynamic resposta;
+    switch(funcao){
+      case 0 : resposta = num1 + num2;
+        break;
+      case 1 : resposta = num1 - num2;
+        break;
+      case 2 : resposta = num1 * num2;
+        break;
+      case 3 : resposta = num1 / num2;
+        break;
+        default : resposta = "Sem entrada";
+    }
+    return resposta;
+  }
+
+  
