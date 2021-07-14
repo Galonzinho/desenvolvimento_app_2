@@ -48,6 +48,7 @@ class _LoginState extends State<Login> {
                 obscureText: true,
               ),
               Padding(padding: EdgeInsets.only(top: 10),
+                //ignore: deprecated_member_use
               child: RaisedButton(
                 color: Colors.deepOrange,
                 textColor: Colors.white,
