@@ -4,7 +4,7 @@ import 'tarefa2.dart';
 
 void main() {
   runApp(MaterialApp(
-  home: Tarefa2(),
+  //home: Tarefa2(),
     //home: TarefaUm()
   ));
 }
