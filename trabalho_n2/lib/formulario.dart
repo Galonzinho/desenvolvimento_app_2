@@ -1,14 +1,33 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'produto.dart';
+import 'aluno.dart';
+import 'botaoradio.dart';
 
-void main() => runApp(FormularioDois());
+void main() => runApp(Formulario());
 
-class FormularioDois extends StatelessWidget {
+class Formulario extends StatefulWidget {
+  @override
+  FormularioState createState() {
+    return new FormularioState();
+  }
+}
+
+class FormularioState extends State<Formulario> {
 
   final TextEditingController _controladorNome = TextEditingController();
   final TextEditingController _controladorEmail = TextEditingController();
   final TextEditingController _controladorIdade = TextEditingController();
+  bool validarNome = false;
+  bool validarEmail = false;
+  bool validarIdade = false;
   bool _isChecked = false;
+
+  void dispose(){
+    _controladorNome.dispose();
+    _controladorEmail.dispose();
+    _controladorIdade.dispose();
+}
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,22 +40,38 @@ class FormularioDois extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
-            TextField(
+            Padding(padding: EdgeInsets.only(left: 8, right: 8),
+            child: TextField(
+              autofocus: true,
               controller: _controladorNome,
-              decoration: InputDecoration(labelText: "Nome:"),
+              decoration: InputDecoration(
+                labelText: "Nome:",
+                errorText: validarNome ? "Campo vazio" : null,
+              ),
               keyboardType: TextInputType.text,
             ),
-            Padding(padding: EdgeInsets.only(top: 16)),
-            TextField(
-              controller: _controladorEmail,
-              decoration: InputDecoration(labelText: "E-mail:"),
-              keyboardType: TextInputType.emailAddress,
             ),
             Padding(padding: EdgeInsets.only(top: 16)),
-            TextField(
+            Padding(padding: EdgeInsets.only(left: 8, right: 8),
+            child: TextField(
+              controller: _controladorEmail,
+              decoration: InputDecoration(
+                labelText: "E-mail:",
+                errorText: validarEmail ? "Campo vazio" : null,
+              ),
+              keyboardType: TextInputType.emailAddress,
+            ),
+            ),
+            Padding(padding: EdgeInsets.only(top: 16)),
+            Padding(padding: EdgeInsets.only(left: 8, right: 8),
+            child: TextField(
               controller: _controladorIdade,
-              decoration: InputDecoration(labelText: "Idade:"),
+              decoration: InputDecoration(
+                  labelText: "Idade:",
+                  errorText: validarIdade ? "Campo vazio" : null,
+              ),
               keyboardType: TextInputType.number,
+            ),
             ),
             Padding(padding: EdgeInsets.only(top: 16)),
             Center(
@@ -46,20 +81,44 @@ class FormularioDois extends StatelessWidget {
               ),
             ),
             MyCheckBoxWidget(),
-            Padding(padding: EdgeInsets.only(top: 80)),
+            Padding(padding: EdgeInsets.only(top: 10),),
+            CustomRadioButtom(),
+            Padding(padding: EdgeInsets.only(bottom: 15)),
             RaisedButton(
+              color: Colors.cyanAccent,
+                padding: EdgeInsets.symmetric(horizontal: 40),
                 child: Text("Cadastrar"),
                 onPressed: (){
                   final String nome = _controladorNome.text;
-                  final int? quantidade = int.tryParse(_controladorEmail.text);
-                  final double? valor = double.tryParse(_controladorIdade.text);
-                })
+                  final String email = _controladorEmail.text;
+                  final int? valor = int.tryParse(_controladorIdade.text);
+                  setState(() {
+                    _controladorNome.text.isEmpty ? validarNome = true : validarNome = false;
+                    _controladorEmail.text.isEmpty ? validarEmail = true : validarEmail = false;
+                    _controladorIdade.text.isEmpty ? validarIdade = true : validarIdade = false;
+                  });
+                }),
+            Padding(padding: EdgeInsets.only(top: 40)),
+            Center(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.redAccent,
+                  textStyle: TextStyle(fontSize: 20),
+                ),
+                child: Text("Voltar ao menu"),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
+
 
 class MyCheckBoxWidget extends StatefulWidget {
   const MyCheckBoxWidget({Key? key}) : super(key: key);
